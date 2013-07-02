@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Battleship</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</link>
+<script src="battleship.js" type="text/javascript"></script>
+<script src="animate.js" type="text/javascript"></script>
+</head>
+
+<body onload="showTable(); getHighscores(); drawCanvas(); getCookies()">
+<div class="tableContainer" id="tableDiv"> </div>
+<div class="controls" id="controlDiv"> 
+  <!--<input id="sampleText" type="text" size="10" value="Text" onchange="displayText(this)"/>-->
+  <button onclick="showTable(); whichButton(event.which)">Reinitialize Ship Positions</button>
+  <button onclick="closeGame();">Close the game window</button>
+  <!--<select onchange="displayVal(this)" id="shipDropdown">
+    <option value="Aircraft Carrier">Aircraft Carrier</option>
+    <option value="Battleship">Battleship</option>
+    <option value="Submarine">Submarine</option>
+    <option value="Destroyer">Destroyer</option>
+    <option value="Patrol Boat">Patrol Boat</option>
+  </select>--> 
+</div>
+<br />
+
+<!-- <div class="cellInformation"> <span id="cookieInformation">Cookie information: </span> </div>
+<div class="cellInformation"><br />
+  <a href="cookieCheck.html">Cookie Check</a> </div>
+<br /> -->
+
+<div id="highscoreDiv" class="cellInformation"> </div>
+<script> // Inline script ensures script is executed before body of the page loads.
+// Code for animating blocks adapted from http://seb.ly/2012/02/learn-to-code-in-2012-the-visual-way/
+	var canvas = document.createElement('canvas'); 
+	document.body.appendChild(canvas); 
+	var width = canvas.width = 200, 
+	height = canvas.height = 200,
+	c = canvas.getContext('2d');
+	function randomRange(min, max) { 
+	return  Math.random()*(max-min) + min; 
+}
+</script>
+<div class="cellInformation">
+  <canvas class="myCanvas" width="200" height="200"></canvas>
+</div>
+
+<!--<div id="shipDiv"> <img id="shipImg" src="battleshipAnimate.png"/> </div>-->
+</body>
+</html>

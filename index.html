@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Play Battleship!</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="battleship.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="header">
+  <h1 class="title">A JavaScript implementation of Battleship</h1>
+  <div class="gameDescription"><br />
+    A single-player adaptation of the classic game Battleship. </div>
+</div>
+<br />
+<!--<p> <a href="javascript:playGame();">Play</a> or <a href="javascript:closeGame();">close the game window</a></p>-->
+<div> Username:
+  <input id="usernameField" type="text" size="10"/>
+  Password:
+  <input id="passwordField" type="password" size="10"/>
+  <button onclick="loadSyncPost()">Log In</button>
+  <span id="loginResult"> </span> </div>
+<p> The player places ships within their game grid by dragging them into place. The computer then places ships in its own game grid which are hidden to the player. The player and computer then take turns selecting positions within the grid. </p>
+<p>Upon selecting a location which is occupied by an enemy ship, the grid is marked at that location. The computer will search adjacent squares until it has sunk the ship. The game will notify the player once a ship has been sunk and when all of either the player's or the computer's ships have been sunk, the game concludes. </p>
+<p> For more information about the game and its history, <a href="http://en.wikipedia.org/wiki/Battleship_(game)">visit Wikipedia</a> </p>
+<p class="imageLegal">
+<hr />
+Image of Battleship Yamato and ALL related marks are trademarks of Leiji Matsumoto. All rights reserved. Artist: Janusz Skulski. Publication date: 1988. Source: <a href="http://www.shipschematics.net/">www.shipschematics.net</a>
+</p>
+</body>
+</html>
